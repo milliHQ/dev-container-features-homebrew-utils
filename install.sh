@@ -1,4 +1,6 @@
 #!/bin/bash
+BREW_PREFIX=${BREW_PREFIX:-"/home/linuxbrew/.linuxbrew"}
+
 set -e
 
 # The install.sh script is the installation entrypoint for any dev container 'features' in this repository.
