@@ -1,0 +1,22 @@
+{
+  "features": [
+    {
+      "id": "homebrew-install",
+      "name": "Install homebrew packages",
+      "documentationURL": "https://github.com/milliHQ/dev-container-features-homebrew-install/README.md",
+      "options": {
+        "tap": {
+          "type": "string",
+          "default": "",
+          "description": "Repositories to tap before installing the packages, separate multiple with spaces."
+        },
+        "packages": {
+          "type": "string",
+          "default": "",
+          "description": "Packages to install, separate multiple with spaces."
+        }
+      },
+      "include": ["typescript-node", "javascript-node", "ubuntu", "debian"]
+    }
+  ]
+}
