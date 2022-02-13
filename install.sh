@@ -47,7 +47,7 @@ EOF
 
         for i in ${!BREW_TAPS_ARRAY[@]}
         do
-            brew tap "${BREW_TAPS_ARRAY[i]}"
+            "${BREW_PREFIX}/bin/brew" tap "${BREW_TAPS_ARRAY[i]}"
         done
     fi
 
@@ -55,6 +55,6 @@ EOF
     BREW_PACKAGES=${_BUILD_ARG_HOMEBREW_INSTALL_PACKAGES}
     if [ "$BREW_PACKAGES" != "" ]; then
         echo "Installing brew packages: ${BREW_PACKAGES}"
-        brew install "${BREW_PACKAGES}"
+        "${BREW_PREFIX}/bin/brew" install "${BREW_PACKAGES}"
     fi
 fi
